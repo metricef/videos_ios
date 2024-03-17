@@ -2,41 +2,38 @@
 <html>
 <head>
   <title>MSD ANIMAL HEALTH WEBSITE</title>
-
- <!-- <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
-
   <link rel="stylesheet" href="css/style2.css">
- <script>
-    document.getElementById('videoPlayer').addEventListener('ended', function() {
-      window.location.href = 'https://metricef.github.io/videosm/';
-    });
-  </script>
-  
 </head>
 <body>
   <header style="display: flex; justify-content: space-between; align-items: center;">
     <img src="videos/MSD1_LOGO.JPG" alt="MSD1 Logo" style="height: 50px;">
-
   </header>
   <h1 style="text-align: center;">Endometrial Cleaning by Intrauterine</h1>
   <div class="image-container">
     <div class="image-wrapper">
-      <a id="videoPlayer" href="videos/Intra Utreine_water based_Done.mp4">
+      <a href="videos/Intra Utreine_water based_Done.mp4">
         <img src="videos/bottle.JPG" alt="Water-Based"><br><br>
         <p style="font-weight: bold; font-size: 30px;">Conventional Water Based IU</p>
-
-        <!--<p>Conventional Water Based IU</p>-->
       </a>
-    </div>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    </div>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
     <div class="image-wrapper">
-      <a id="videoPlayer" href="videos/Metricef_Done.mp4">
+      <a href="videos/Metricef_Done.mp4">
         <img src="videos/metricef.JPG" alt="Metricef-Based"><br>
         <img src="videos/metri_tm.JPG" alt="Metricef-Based">
-        <!--<p>Metricef</p>-->
       </a>
     </div>
   </div>
- 
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var videos = document.querySelectorAll('video');
+
+      videos.forEach(function(video) {
+        video.addEventListener('ended', function() {
+          window.location.href = "https://metricef.github.io/videosm/";
+        });
+      });
+    });
+  </script>
 </body>
-</html> 
+</html>
